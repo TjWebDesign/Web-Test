@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tyler Kisner Web Design – Websites for small businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#1a110a; --bg2:#24170d; --card:#2e1d11; --line:#4a3220;
+  --amber:#e39a2d; --honey:#f4be5b; --text:#f3e4c8; --muted:#b59d7d;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Karla',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--honey);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:600 26px var(--serif);text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--amber)}
+nav a{margin-left:26px;text-decoration:none;color:var(--muted);font-size:16px}
+nav a:hover{color:var(--honey)}
+.hero{position:relative;overflow:hidden;padding:84px 0 110px;
+  background:radial-gradient(ellipse 60% 70% at 78% 30%,rgba(227,154,45,.30),transparent 70%),var(--bg)}
+.hero h1{font:500 clamp(42px,7vw,84px)/1.04 var(--serif);margin:0 0 22px;max-width:12em}
+.hero h1 em{font-style:italic;color:var(--honey)}
+.hero p{max-width:34em;color:var(--muted);font-size:20px;margin:0 0 34px}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;background:var(--amber);color:#1a110a;font-weight:700;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--honey)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);margin-left:12px}
+.btn.ghost:hover{border-color:var(--amber);color:var(--honey)}
+.smoke{position:absolute;right:6%;top:8%;width:260px;height:420px;pointer-events:none;opacity:.5}
+.smoke i{position:absolute;bottom:0;left:50%;width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,rgba(243,228,200,.22),transparent 65%);filter:blur(14px);animation:rise 14s ease-in infinite}
+.smoke i:nth-child(2){animation-delay:-5s;left:40%}
+.smoke i:nth-child(3){animation-delay:-9s;left:60%}
+@keyframes rise{0%{transform:translate(-50%,0) scale(.6);opacity:0}15%{opacity:.9}100%{transform:translate(-20%,-420px) scale(2);opacity:0}}
+section{padding:84px 0;border-top:1px solid var(--line)}
+section.alt{background:var(--bg2)}
+h2{font:500 clamp(32px,4.5vw,50px)/1.1 var(--serif);margin:0 0 14px}
+.lede{color:var(--muted);max-width:36em;margin:0 0 46px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px}
+.card h3{font:600 27px var(--serif);margin:0 0 8px;color:var(--honey)}
+.card p{margin:0;color:var(--muted);font-size:17px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font:italic 500 46px/1 var(--serif);color:var(--amber)}
+.steps b{display:block;font:600 24px var(--serif);margin-bottom:4px}
+.steps span{color:var(--muted)}
+.price{font:500 46px/1 var(--serif);color:var(--text);margin:10px 0 14px}
+.price small{font:400 16px var(--sans);color:var(--muted)}
+.card ul{list-style:none;margin:0 0 6px;padding:0;color:var(--muted);font-size:17px}
+.card li{padding:7px 0;border-top:1px solid var(--line)}
+.card.pick{border-color:var(--amber);box-shadow:0 0 40px rgba(227,154,45,.15)}
+.quote{font:italic 500 clamp(26px,3.6vw,38px)/1.3 var(--serif);max-width:24em;margin:0 0 18px}
+.who{color:var(--muted);font-size:16px}
+.contact{text-align:center}
+.contact .lede{margin-left:auto;margin-right:auto}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px;text-align:center}
+@media(max-width:640px){.logo{font-size:21px}nav a:not(.keep){display:none}.btn.ghost{margin:12px 0 0}.smoke{opacity:.25}.steps li{grid-template-columns:44px 1fr}}
+@media(prefers-reduced-motion:reduce){.smoke i{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="#top">Tyler Kisner <span>Web Design</span></a>
+    <nav><a href="#services">Services</a><a href="#process">How it works</a><a href="#pricing">Pricing</a><a class="keep" href="#contact">Contact</a></nav>
+  </header>
+</div>
+
+<main id="top">
+<div class="hero"><div class="smoke" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <h1>A website that’s <em>ready</em> when your customers are.</h1>
+    <p>We design and build calm, clear websites for small businesses. No jargon, no pressure, no surprises. Just a good place for your business to live online.</p>
+    <a class="btn" href="#contact">Book a free chat</a><a class="btn ghost" href="#pricing">See pricing</a>
+  </div>
+</div>
+
+<section id="services"><div class="wrap">
+  <h2>Everything your site needs, handled.</h2>
+  <p class="lede">Whether you’re starting from nothing or tired of a site that never worked, we take care of the whole thing.</p>
+  <div class="grid">
+    <div class="card"><h3>Custom design</h3><p>A look that fits your business, not a template everyone else is using. Made to feel like you.</p></div>
+    <div class="card"><h3>Mobile-first build</h3><p>Fast, easy to read and simple to tap on any phone, tablet or desktop.</p></div>
+    <div class="card"><h3>Be found on Google</h3><p>Local search setup, so people in your town find you when they look for what you do.</p></div>
+    <div class="card"><h3>Online booking & shops</h3><p>Let customers book, order or pay on your site, day or night.</p></div>
+    <div class="card"><h3>Care & updates</h3><p>Hosting, security and small changes covered monthly. Call us instead of figuring it out.</p></div>
+    <div class="card"><h3>Easy to edit</h3><p>Change your hours, photos or prices yourself, with a short walkthrough from us.</p></div>
+  </div>
+</div></section>
+
+<section id="process" class="alt"><div class="wrap">
+  <h2>Four steps, no rushing.</h2>
+  <p class="lede">Most sites launch in three to five weeks. You’ll always know what’s happening next.</p>
+  <ol class="steps">
+    <li><div><b>We listen</b><span>A relaxed conversation about your business, your customers and what you want the site to do.</span></div></li>
+    <li><div><b>We sketch</b><span>You see the layout and look first, and tell us what to adjust before we build anything.</span></div></li>
+    <li><div><b>We build</b><span>We write, design and set everything up, then you review the site and request changes.</span></div></li>
+    <li><div><b>We launch and stay</b><span>We publish, check everything works, and remain on hand for questions afterward.</span></div></li>
+  </ol>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>Clear prices, one time.</h2>
+  <p class="lede">Sample packages. Every project starts with a free conversation, and we’ll tailor a quote to you.</p>
+  <div class="grid">
+    <div class="card"><h3>Simple</h3><div class="price">$1,200</div>
+      <ul><li>One-page website</li><li>Contact form and map</li><li>Mobile-friendly design</li><li>Ready in about 2 weeks</li></ul></div>
+    <div class="card pick"><h3>Standard</h3><div class="price">$2,800</div>
+      <ul><li>Up to 6 pages</li><li>Local search setup</li><li>Photo gallery or menu</li><li>Easy-edit training</li></ul></div>
+    <div class="card"><h3>Full service</h3><div class="price">$5,500+</div>
+      <ul><li>Online booking or store</li><li>Custom branding touches</li><li>Monthly care plan included</li><li>Priority support</li></ul></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="quote">“I’d put off a website for years. They made it feel easy, and my first booking came in the week we launched.”</p>
+  <p class="who">Maria D., owner, Corner Bakehouse (sample testimonial)</p>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Pull up a chair.</h2>
+  <p class="lede">Tell us about your business. We’ll reply within one business day with honest advice, whether or not we work together.</p>
+  <a class="btn" href="mailto:Tylerkisnerwebdesign@gmail.com?subject=Website%20inquiry">Email Tylerkisnerwebdesign@gmail.com</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Tyler Kisner Web Design. Built with care for small businesses.</div></footer>
+</body>
+</html>
